@@ -4,17 +4,26 @@
 	"private": true,
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
+		"test": "jest",
+    "start:web": "react-scripts start",
+    "build:web": "react-scripts build",
+    "test:web": "react-scripts test --env=jsdom",
+    "eject:web": "react-scripts eject"
 	},
 	"dependencies": {
-		"react": "~15.4.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
 		"react-native": "0.41.2"
 	},
 	"devDependencies": {
 		"babel-jest": "18.0.0",
 		"babel-preset-react-native": "1.9.1",
 		"jest": "18.1.0",
-		"react-test-renderer": "~15.4.0"
+		"react-test-renderer": "~15.4.0",
+    "react-native-web": "0.0.71",
+    "react-router": "^4.0.0-beta.6",
+    "react-router-dom": "^4.0.0-beta.6",
+    "react-scripts": "0.9.0"
 	},
 	"jest": {
 		"preset": "react-native"
