@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { ListView, StyleSheet, Text, View } from 'react-native';
+import { ListView, Text } from 'react-native';
 import { getResources } from '../api/SWApi';
 import Link from './Link';
-
-const styles = StyleSheet.create({
-});
 
 class Resources extends Component {
 	constructor() {
@@ -28,7 +25,7 @@ class Resources extends Component {
 
 	renderRow = (name) => (
 		<Link to={name}>
-			{name}
+			<Text>{name}</Text>
 		</Link>
 	);
 

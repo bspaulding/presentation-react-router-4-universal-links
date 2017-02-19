@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView, Text, View } from 'react-native';
+import { ListView, Text } from 'react-native';
 import { getPeople } from '../api/SWApi';
 import Link from './Link';
 
@@ -30,7 +30,7 @@ class People extends Component {
 
 	renderRow = (person) => (
 		<Link to={`/people/${getPersonId(person.url)}`}>
-			{person.name}
+			<Text>{person.name}</Text>
 		</Link>
 	);
 
