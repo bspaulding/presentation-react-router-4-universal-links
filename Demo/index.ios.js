@@ -13,12 +13,16 @@ import {
 } from 'react-native';
 import App from './src/components/App';
 import { NativeRouter as Router } from 'react-router-native';
+import DeepLinking from './src/components/DeepLinking';
 
 export default class Demo extends Component {
   render() {
     return (
 			<Router>
-				<App/>
+				<View>
+					<DeepLinking/>
+					<App/>
+				</View>
 			</Router>
     );
   }
