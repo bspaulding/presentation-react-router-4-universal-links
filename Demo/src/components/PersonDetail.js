@@ -10,7 +10,8 @@ class PersonDetail extends Component {
 	}
 
 	async componentDidMount() {
-		const person = await getPerson(1);
+		const { id } = this.props.match.params;
+		const person = await getPerson(id);
 		this.setState({ person, loading: false });
 	}
 
