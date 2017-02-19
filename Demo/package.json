@@ -5,7 +5,7 @@
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest",
-		"start:web": "react-scripts start",
+		"start:web": "HTTPS=true react-scripts start",
 		"build:web": "react-scripts build",
 		"test:web": "react-scripts test --env=jsdom",
 		"eject:web": "react-scripts eject"
