@@ -1,4 +1,4 @@
-const rootURI = 'http://swapi.co/api/';
+const rootURI = 'https://swapi.co/api/';
 
 async function getJSON(uri) {
 	const response = await fetch(uri);
