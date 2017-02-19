@@ -4,7 +4,8 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>swul.motingo.com</string>
+		<string>applinks:swul.motingo.com</string>
+		<string>applinks:motingo.com</string>
 	</array>
 </dict>
 </plist>
