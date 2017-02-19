@@ -15,9 +15,9 @@ export async function getResources() {
 }
 
 export async function getPeople() {
-	return getJSON(`${rootURI}people`);
+	return getJSON(`${rootURI}people/`);
 }
 
 export async function getPerson(id) {
-	return getJSON(`${rootURI}people/${id}`);
+	return getJSON(`${rootURI}people/${id}/`);
 }
