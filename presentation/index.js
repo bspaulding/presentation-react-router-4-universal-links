@@ -39,6 +39,7 @@ function lines(start, end, text) {
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 require("./index.css");
+require("./prism-solarizedlight.css");
 
 const images = {
 	associatedDomain: require("../assets/associatedDomains.png")
