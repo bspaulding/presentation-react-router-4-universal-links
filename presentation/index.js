@@ -42,7 +42,7 @@ require("./index.css");
 require("./prism-solarizedlight.css");
 
 const images = {
-	associatedDomain: require("../assets/associatedDomains.png")
+	associatedDomain: require("../assets/associatedDomains.png").replace("/", "")
 };
 
 preloader(images);
