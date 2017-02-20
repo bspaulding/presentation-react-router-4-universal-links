@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run clean & npm run build && surge -p .",
+    "deploy": "git branch -D gh-pages && git checkout -b gh-pages && npm run build && git add -f dist && git commit -m 'built' && git push --force origin gh-pages && git checkout master",
     "start": "cross-env NODE_ENV=development node server.js"
   },
   "author": "",
