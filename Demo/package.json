@@ -8,7 +8,8 @@
 		"start:web": "HTTPS=true react-scripts start",
 		"build:web": "react-scripts build",
 		"test:web": "react-scripts test --env=jsdom",
-		"eject:web": "react-scripts eject"
+		"eject:web": "react-scripts eject",
+		"deploy:web": "npm run build:web && rsync -urltv --delete -e ssh build/* root@motingo.com:/var/www/swul"
 	},
 	"dependencies": {
 		"react": "^15.4.2",
