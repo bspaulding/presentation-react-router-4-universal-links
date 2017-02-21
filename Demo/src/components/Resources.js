@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { ListView, Text } from 'react-native';
+import { ListView } from 'react-native';
 import { getResources } from '../api/SWApi';
 import Link from './Link';
+import Text from './Text';
 
 class Resources extends Component {
 	constructor() {

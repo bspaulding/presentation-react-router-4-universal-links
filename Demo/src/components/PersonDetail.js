@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { getPerson } from '../api/SWApi';
 import Loading from './Loading';
+import Text from './Text';
 
 class PersonDetail extends Component {
 	constructor() {

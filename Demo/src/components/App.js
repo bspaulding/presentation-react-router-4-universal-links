@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import Route from './Route';
 import Switch from './Switch';
 import Resources from './Resources';
 import People from './People';
 import PersonDetail from './PersonDetail';
+import StarryBackground from './StarryBackground';
+import Text from './Text';
 
 const styles = StyleSheet.create({
 	container: {
@@ -20,14 +22,17 @@ const NoMatch = ({ location }) => (
 class App extends Component {
 	render() {
 		return (
-			<View style={styles.container}>
-				<Switch>
-					<Route path="/" exact component={Resources}/>
-					<Route path="/people" exact component={People}/>
-					<Route path="/people/:id" exact component={PersonDetail}/>
-					<Route component={NoMatch}/>
-				</Switch>
-			</View>
+			<StarryBackground>
+				<View style={styles.container}>
+					<Switch>
+						<Route path="/" exact component={Resources}/>
+						<Route path="/people" exact component={People}/>
+						<Route path="/people/:id" exact component={PersonDetail}/>
+						<Route component={NoMatch}/>
+					</Switch>
+				</View>
+				<StatusBar barStyle="light-content"/>
+			</StarryBackground>
 		);
 	}
 }

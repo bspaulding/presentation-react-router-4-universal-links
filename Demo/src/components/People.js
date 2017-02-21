@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { ListView, Text } from 'react-native';
+import { ListView } from 'react-native';
 import { getPeople } from '../api/SWApi';
 import Link from './Link';
+import Text from './Text';
 
 const getPersonId = (url) => {
 	const [_, id] = /http:\/\/swapi.co\/api\/people\/(.*)\//.exec(url);
