@@ -244,6 +244,9 @@ export default class Presentation extends React.Component {
 					}, {
 						href: "http://building.usebutton.com/debugging/ios/deep-linking/links/universal-links/2016/03/31/debugging-universal-links/",
 						title: "Debugging Universal Links"
+					}, {
+						href: "https://reactnavigation.org/",
+						title: "React Navigation"
 					}]}
 					/>
 				</Slide>
