@@ -11,7 +11,8 @@ import Text from './Text';
 const styles = StyleSheet.create({
 	container: {
 		padding: 12,
-		marginTop: 20
+		marginTop: 20,
+		flex: 1
 	}
 });
 
