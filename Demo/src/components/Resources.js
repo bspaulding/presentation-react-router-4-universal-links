@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ListView } from 'react-native';
-import { getResources } from '../api/SWApi';
 import ListItem from './ListItem';
 
 class Resources extends Component {
