@@ -11,17 +11,15 @@ class Resources extends Component {
 		this.state = {
 			dataSource: new ListView.DataSource({
 				rowHasChanged: (a, b) => a !== b
-			}).cloneWithRows([])
+			}).cloneWithRows([
+				'people',
+				'planets',
+				'films',
+				'species',
+				'vehicles',
+				'starships'
+			])
 		};
-	}
-
-	async componentDidMount() {
-		const resources = await getResources();
-		this.setState({
-			dataSource: this.state.dataSource.cloneWithRows(
-				Object.keys(resources)
-			)
-		});
 	}
 
 	renderRow = (name) => (
