@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ListView } from 'react-native';
 import { getPeople } from '../api/SWApi';
-import Link from './Link';
-import Text from './Text';
+import ListItem from './ListItem';
+import Loading from './Loading';
 
 const getPersonId = (url) => {
 	const [_, id] = /http:\/\/swapi.co\/api\/people\/(.*)\//.exec(url);
@@ -16,7 +16,8 @@ class People extends Component {
 		this.state = {
 			dataSource: new ListView.DataSource({
 				rowHasChanged: (a, b) => a !== b
-			}).cloneWithRows([])
+			}).cloneWithRows([]),
+			loading: true
 		};
 	}
 
@@ -25,18 +26,20 @@ class People extends Component {
 		this.setState({
 			dataSource: this.state.dataSource.cloneWithRows(
 				response.results
-			)
+			),
+			loading: false
 		});
 	}
 
 	renderRow = (person) => (
-		<Link to={`/people/${getPersonId(person.url)}`}>
-			<Text>{person.name}</Text>
-		</Link>
+		<ListItem to={`/people/${getPersonId(person.url)}`}>
+			{person.name}
+		</ListItem>
 	);
 
 	render() {
-		return (
+		const { loading } = this.state;
+		return loading ? <Loading/> : (
 			<ListView
 				dataSource={this.state.dataSource}
 				enableEmptySections={true}
