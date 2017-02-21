@@ -1,22 +1,25 @@
 import React from 'react';
-import stars from '../../public/beautiful-blue-stars-fill.jpg';
+import {
+	Image,
+	StyleSheet
+} from 'react-native';
+import stars from '../../public/stars.png';
 
-const styles = {
+const styles = StyleSheet.create({
 	content: {
 		backgroundColor: 'transparent',
-		backgroundImage: `url(${stars})`,
 		position: 'absolute',
 		top: 0,
 		left: 0,
 		right: 0,
 		bottom: 0
 	}
-};
+});
 
 const StarryBackground = ({ children }) => (
-	<div style={styles.content}>
+	<Image source={stars} style={styles.content}>
 		{children}
-	</div>
+	</Image>
 );
 
 export default StarryBackground;
