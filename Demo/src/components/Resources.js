@@ -21,7 +21,7 @@ class Resources extends Component {
 	}
 
 	renderRow = (name) => (
-		<ListItem to={name}>{name}</ListItem>
+		<ListItem to={name}>{name.toUpperCase()}</ListItem>
 	);
 
 	render() {

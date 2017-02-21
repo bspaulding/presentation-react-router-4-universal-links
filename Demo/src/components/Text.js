@@ -1,6 +1,13 @@
 import React from 'react';
-import { Text as RNText } from 'react-native';
+import { StyleSheet, Text as RNText } from 'react-native';
 
-const Text = (props) => <RNText {...props} style={[{ color: 'white' }, props.style]}/>
+const styles = StyleSheet.create({
+	defaults: {
+		color: 'white',
+		fontFamily: 'STARWARS'
+	}
+});
+
+const Text = (props) => <RNText {...props} style={[styles.defaults, props.style]}/>
 
 export default Text;
