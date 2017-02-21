@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StatusBar, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Route from './Route';
 import Switch from './Switch';
 import Resources from './Resources';
@@ -31,7 +31,6 @@ class App extends Component {
 						<Route component={NoMatch}/>
 					</Switch>
 				</View>
-				<StatusBar barStyle="light-content"/>
 			</StarryBackground>
 		);
 	}
