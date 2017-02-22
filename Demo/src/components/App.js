@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import Route from './Route';
 import Switch from './Switch';
 import Resources from './Resources';
@@ -34,7 +34,7 @@ class App extends Component {
 	render() {
 		return (
 			<StarryBackground>
-				<View style={styles.container}>
+				<ScrollView style={styles.container}>
 					<Switch>
 						<Route path="/" exact component={Resources}/>
 						<Route path="/people" exact component={People}/>
@@ -51,7 +51,7 @@ class App extends Component {
 						<Route path="/starships/:id" exact component={StarshipDetail}/>
 						<Route component={NoMatch}/>
 					</Switch>
-				</View>
+				</ScrollView>
 			</StarryBackground>
 		);
 	}

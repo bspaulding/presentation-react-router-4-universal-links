@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
 		borderBottomColor: 'white',
 		borderBottomWidth: 1,
 		borderStyle: 'solid',
-		marginTop: 12
+		marginVertical: 12,
+		paddingBottom: 6,
 	},
 	text: {
 		fontSize: 18,

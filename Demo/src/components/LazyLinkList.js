@@ -5,10 +5,10 @@ import Text from './Text';
 import Request from './Request';
 import { getId } from './ListView';
 
-const LazyLinkList = ({ association, source }) => {
+const LazyLinkList = ({ accessor, association, source }) => {
 	return (
 		<View>
-			{source[association].map(url => (
+			{source[accessor || association].map(url => (
 				<Request key={url} url={url}>
 					{(object) => (
 						<Link key={url} to={`/${association}/${getId(association)(url)}`}>
