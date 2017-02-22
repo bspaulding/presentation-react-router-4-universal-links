@@ -1,4 +1,3 @@
-// Import React
 import React from "react";
 
 // Import Spectacle Core tags
@@ -161,6 +160,7 @@ export default class Presentation extends React.Component {
 				</Slide>
 				<Slide transition={["slide"]}>
 					<Heading size={6} textColor="secondary" caps>Implementing Deep Links</Heading>
+					<Heading size={7} textColor="secondary">iOS</Heading>
 					<AppearingText textColor="quaternary" padding={20}>Setup SSL on your site &#10003;</AppearingText>
 					<AppearingText textColor="quaternary" padding={20}>Add <Code>apple-app-site-association</Code> file</AppearingText>
 					<AppearingText textColor="quaternary" padding={20}>Add Associated Domain Entitlement</AppearingText>
@@ -220,6 +220,24 @@ export default class Presentation extends React.Component {
 								lang="javascript"
 								source={require("!!raw-loader!./Linking.example").trim()}
 								style={{ fontSize: 24 }}
+							/>
+						</Fit>
+					</Layout>
+				</Slide>
+				<Slide transition={["slide"]}>
+					<Heading size={6} textColor="secondary" caps>Implementing Deep Links</Heading>
+					<Heading size={7} textColor="secondary">Android</Heading>
+					<AppearingText textColor="quaternary" padding={20}>Update AndroidManifest.xml</AppearingText>
+					<AppearingText textColor="quaternary" padding={20}>Listen to <Code>Linking</Code> events</AppearingText>
+				</Slide>
+				<Slide transition={["slide"]}>
+					<Heading size={6} textColor="secondary" caps>Update AndroidManifest.xml</Heading>
+					<Layout style={{ justifyContent: 'center' }}>
+						<Fit>
+							<CodePane
+								lang="jsx"
+								source={require("!!raw-loader!./AndroidManifest.example.xml").trim()}
+								style={{ fontSize: 24, maxWidth: 'none' }}
 							/>
 						</Fit>
 					</Layout>
