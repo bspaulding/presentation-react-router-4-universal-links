@@ -8,11 +8,7 @@ import { Stat, Stats } from './Stat';
 import Request from './Request';
 import Link from './Link';
 import Text from './Text';
-import { getId } from './ListView';
-
-const getFilmId = getId('films');
-const getStarshipId = getId('starships');
-const getVehicleId = getId('vehicles');
+import LazyLinkList from './LazyLinkList';
 
 class PersonDetail extends Component {
 	constructor() {
@@ -45,35 +41,11 @@ class PersonDetail extends Component {
 					<Stat label="Skin Color">{person.skin_color}</Stat>
 				</Stats>
 				<SectionHeading>Films ({person.films.length})</SectionHeading>
-				{person.films.map(url => (
-					<Request key={url} url={url}>
-						{(film) => (
-							<Link key={url} to={`/films/${getFilmId(url)}`}>
-								<Text>{film.title}</Text>
-							</Link>
-						)}
-					</Request>
-				))}
+				<LazyLinkList source={person} association="films"/>
 				<SectionHeading>Starships ({person.starships.length})</SectionHeading>
-				{person.starships.map(url => (
-					<Request key={url} url={url}>
-						{(ship) => (
-							<Link key={url} to={`/starships/${getStarshipId(url)}`}>
-								<Text>{ship.name}</Text>
-							</Link>
-						)}
-					</Request>
-				))}
+				<LazyLinkList source={person} association="starships"/>
 				<SectionHeading>Vehicles ({person.vehicles.length})</SectionHeading>
-				{person.vehicles.map(url => (
-					<Request key={url} url={url}>
-						{(vehicle) => (
-							<Link key={url} to={`/vehicles/${getVehicleId(url)}`}>
-								<Text>{vehicle.name}</Text>
-							</Link>
-						)}
-					</Request>
-				))}
+				<LazyLinkList source={person} association="vehicles"/>
 			</View>
 		);
 	}
