@@ -65,6 +65,10 @@ module.exports = {
       test: /\.jpg$/,
       loader: "url-loader?mimetype=image/jpg",
       include: path.join(__dirname, "assets")
+    }, {
+      test: /\.mov/,
+      loader: "file-loader?mimetype=video/quicktime",
+      include: path.join(__dirname, "assets")
     }]
   }
 };

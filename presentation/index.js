@@ -243,7 +243,17 @@ export default class Presentation extends React.Component {
 					</Layout>
 				</Slide>
 				<Slide transition={["zoom", "fade"]} bgColor="secondary">
-					<Heading textColor="primary" caps>Demo</Heading>
+					<div style={{ position: 'absolute', top: -70, left: 0, right: 0, bottom: 0, zIndex: 1 }}>
+						<Heading size={4} textColor="primary">Demos</Heading>
+					</div>
+					<Layout>
+						<Fill>
+							<video src={require("../assets/demo-ios.mov").replace("/", "")} autoPlay loop style={{ height: 640 }}/>
+						</Fill>
+						<Fill>
+							<video src={require("../assets/demo-android.mov").replace("/", "")} autoPlay loop style={{ height: 640 }}/>
+						</Fill>
+					</Layout>
 				</Slide>
 				<Slide transition={["slide"]}>
 					<Heading size={6} textColor="secondary" caps>Resources</Heading>
@@ -262,6 +272,9 @@ export default class Presentation extends React.Component {
 					}, {
 						href: "http://building.usebutton.com/debugging/ios/deep-linking/links/universal-links/2016/03/31/debugging-universal-links/",
 						title: "Debugging Universal Links"
+					}, {
+						href: "https://github.com/ReactTraining/react-router/tree/v4/packages/react-router-native/experimental",
+						title: "<StackRoutes> and <TabRoutes>"
 					}, {
 						href: "https://reactnavigation.org/",
 						title: "React Navigation"

@@ -42,6 +42,9 @@ module.exports = {
     }, {
       test: /\.svg$/,
       loader: "url-loader?limit=10000&mimetype=image/svg+xml"
+    }, {
+      test: /\.mov/,
+      loader: "file-loader?mimetype=video/quicktime"
     }]
   }
 };
