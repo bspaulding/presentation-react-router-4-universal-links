@@ -8,7 +8,7 @@ import { getId } from './ListView';
 export const LazyLink = ({ association, url }) => (
 	<Request key={url} url={url}>
 		{(object) => (
-			<Link key={url} to={`/${association}/${getId(association)(url)}`}>
+			<Link to={`/${association}/${getId(association)(url)}`}>
 				<Text>{object.name || object.title}</Text>
 			</Link>
 		)}
@@ -19,7 +19,7 @@ const LazyLinkList = ({ accessor, association, source }) => {
 	return (
 		<View>
 			{source[accessor || association].map(url => (
-				<LazyLink url={url} association={association}/>
+				<LazyLink key={url} url={url} association={association}/>
 			))}
 		</View>
 	);
