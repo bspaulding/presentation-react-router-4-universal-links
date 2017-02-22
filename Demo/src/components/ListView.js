@@ -4,7 +4,7 @@ import { getFilms } from '../api/SWApi';
 import ListItem from './ListItem';
 import Loading from './Loading';
 
-const getId = name => {
+export const getId = name => {
 	const regex = new RegExp(`http:\/\/swapi.co\/api\/${name}\/(.*)\/`);
 	return url => {
 		const [_, id] = regex.exec(url);
