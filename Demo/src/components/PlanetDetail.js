@@ -3,6 +3,10 @@ import { View } from 'react-native';
 import { getPlanet } from '../api/SWApi';
 import Loading from './Loading';
 import Text from './Text';
+import Heading from './Heading';
+import SectionHeading from './SectionHeading';
+import LazyLinkList from './LazyLinkList';
+import { Stats, Stat } from './Stat';
 
 class PlanetDetail extends Component {
 	constructor() {
@@ -24,7 +28,21 @@ class PlanetDetail extends Component {
 
 		return (
 			<View>
-				<Text>{planet.name}</Text>
+				<Heading>{planet.name}</Heading>
+				<Stats>
+					<Stat label="Climate">{planet.climate}</Stat>
+					<Stat label="Diameter">{planet.diameter}</Stat>
+					<Stat label="Gravity">{planet.gravity}</Stat>
+					<Stat label="Orbital Period">{planet.orbital_period}</Stat>
+					<Stat label="Population">{planet.population}</Stat>
+					<Stat label="Rotation Period">{planet.rotation_period}</Stat>
+					<Stat label="Surface Water">{planet.surface_water}</Stat>
+					<Stat label="Terrain">{planet.terrain}</Stat>
+				</Stats>
+				<SectionHeading>Films ({planet.films.length})</SectionHeading>
+				<LazyLinkList source={planet} association="films"/>
+				<SectionHeading>Residents ({planet.residents.length})</SectionHeading>
+				<LazyLinkList source={planet} accessor="residents" association="people"/>
 			</View>
 		);
 	}
