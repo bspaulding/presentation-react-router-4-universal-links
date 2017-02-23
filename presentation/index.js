@@ -258,10 +258,13 @@ export default class Presentation extends React.Component {
 					</div>
 					<Layout>
 						<Fill>
-							<video src={require("../assets/demo-ios.mov").replace("/", "")} autoPlay loop style={{ height: 720, position: 'relative', top: -20 }}/>
+							<video src={require("../assets/demo-web.mov").replace("/", "")} autoPlay loop style={{ height: 720, position: 'relative', top: -20, left: -240 }}/>
 						</Fill>
 						<Fill>
-							<video src={require("../assets/demo-android.mov").replace("/", "")} autoPlay loop style={{ height: 720, position: 'relative', top: -20 }}/>
+							<video src={require("../assets/demo-ios.mov").replace("/", "")} autoPlay loop style={{ height: 720, position: 'relative', top: -20, left: -140 }}/>
+						</Fill>
+						<Fill>
+							<video src={require("../assets/demo-android.mov").replace("/", "")} autoPlay loop style={{ height: 720, position: 'relative', top: -20, left: -40 }}/>
 						</Fill>
 					</Layout>
 				</Slide>
