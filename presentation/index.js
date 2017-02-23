@@ -13,6 +13,7 @@ import {
 	Fill,
 	Fit,
 	Layout,
+	Link,
 	ListItem,
 	List,
 	Quote,
@@ -64,10 +65,10 @@ export default class Presentation extends React.Component {
 			<Deck transition={[]} transitionDuration={500} theme={theme}>
 				<Slide transition={["zoom"]} bgColor="primary">
 					<Heading size={1} fit caps lineHeight={1} textColor="secondary">
-						Routes and Links
+						Routes and Deep Linking
 					</Heading>
 					<Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-						Using React Router v4 with React Native
+						React Router v4 and React Native
 					</Text>
 				</Slide>
 				<Slide transition={["slide"]}>
@@ -159,6 +160,15 @@ export default class Presentation extends React.Component {
 					</Layout>
 				</Slide>
 				<Slide transition={["slide"]}>
+					<Heading size={6} textColor="secondary" caps>What is Deep Linking?</Heading>
+					<Text textColor="secondary">
+						Handle your website's URLs
+					</Text>
+					<Text textColor="secondary">
+						inside your native app
+					</Text>
+				</Slide>
+				<Slide transition={["slide"]}>
 					<Heading size={6} textColor="secondary" caps>Implementing Deep Links</Heading>
 					<Heading size={7} textColor="secondary">iOS</Heading>
 					<AppearingText textColor="quaternary" padding={20}>Setup SSL on your site &#10003;</AppearingText>
@@ -248,10 +258,10 @@ export default class Presentation extends React.Component {
 					</div>
 					<Layout>
 						<Fill>
-							<video src={require("../assets/demo-ios.mov").replace("/", "")} autoPlay loop style={{ height: 640 }}/>
+							<video src={require("../assets/demo-ios.mov").replace("/", "")} autoPlay loop style={{ height: 720, position: 'relative', top: -20 }}/>
 						</Fill>
 						<Fill>
-							<video src={require("../assets/demo-android.mov").replace("/", "")} autoPlay loop style={{ height: 640 }}/>
+							<video src={require("../assets/demo-android.mov").replace("/", "")} autoPlay loop style={{ height: 720, position: 'relative', top: -20 }}/>
 						</Fill>
 					</Layout>
 				</Slide>
@@ -288,6 +298,11 @@ export default class Presentation extends React.Component {
 					<Heading caps>Thanks!</Heading>
 					<Text textColor="secondary" style={{ paddingTop: 20 }}>github / bspaulding</Text>
 					<Text textColor="secondary" style={{ paddingTop: 20 }}>twitter / bradspaulding</Text>
+					<Text textColor="tertiary" style={{ fontSize: 21, paddingTop: 40 }}>
+						<Link to="https://github.com/bspaulding/presentation-react-router-4-universal-links">
+							Slides at github.com/bspaulding/presentation-react-router-4-universal-links
+						</Link>
+					</Text>
 				</Slide>
 			</Deck>
 		);
